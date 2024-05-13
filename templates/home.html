@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block banner %}
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="{{ url_for('static', filename='app/images/tri-tue-nhan-tao-trong-cac-hoat-dong-doanh-nghiep-23016_uLYjEpu.jpg') }}" height='700' class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block" style="color:white;"> 
+        <h5>Trí Tuệ Nhân Tạo Đối Với Doanh Nghiệp</h5>
+        <p>Việc Thay Đổi Cơ Cấu Lao Động Từ Máy Móc Sang Con Người Liệu Có Tốt?</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="{{ url_for('static', filename='app/images/quy-trinh-spm.jpg') }}" height='700' class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Quản Lý Dự Án Công Nghệ Thông Tin</h5>
+        <p>Xây Dựng Dự Án Công Nghệ Thông Tin Cần Những Gì?</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='app/images/tri tue nhan tao.jpg') }}" height='700' class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block" >
+        <h5>Trí Tuệ Nhân Tạo Trong Đời Sống</h5>
+        <p>Liệu Con Người Có Dần Bị Lười Biếng Và Phụ Thuộc Vào Trí Tuệ Nhân Tạo Không?</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+{% endblock banner %}
+
+{% block content %}
+<style>
+  .project-info {
+    text-align: center;
+    margin-top: 20px;
+}
+  .title {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .banner {
+    align:left;
+    margin-left: 20px;
+  }
+</style>
+<h1 class="title">Xây Dựng Website Nhận Diện Hình Tròn</h1>
+
+    <div class="project-info">
+        <p><strong>Người Thực Hiện:</strong> Lê Thanh Quân</p>
+        <p><strong>Thời Gian Bắt Đầu:</strong> 15/09/2023</p>
+        <p><strong>Thời Gian Dự Kiến Hoàn Thành:</strong> 24/10/2023</p>
+    </div>
+    <hr  width="100%"/>
+    <img align="left" height="200" src="{{ url_for('static', filename='app/images/images (1).jpg') }}"  style="margin-left: 400px; margin-right: auto;" width="300" />
+
+    <h1 class="banner">Xây Dựng Website Nhận Diện Hình Tròn</h1>
+    <p align='center'> Website được tạo ra nhằm giúp các doanh nghiệp tiếp cận gần hơn với trí tuệ nhân tạo và các ứng dụng về chúng. Đồng thời nâng cao tốc độ sản xuất và độ chính xác </p>
+    
+{% endblock content %}

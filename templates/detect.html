@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block img %}
+<img src="{{ url_for('static', filename='app/images/7-4.jpg') }}" height="500"/>
+{% endblock img %}
+{% block detect %}
+
+<h1>Circle Detection Web App</h1>
+
+{% if error %}
+    <p>{{ error }}</p>
+{% endif %}
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required>
+    <input type="submit" value="Detect Circles">
+</form>
+
+{% if result_image %}
+    <h2>Detected Circles:</h2>
+    <img src="{{ url_for('detect_circles') }}" alt="Detected Circles">
+{% endif %}
+{% endblock detect %}

@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block img %}
+<h2>Detected Circles</h2>
+<img src="{{ image }}" alt="Detected Circles">
+<ul>
+    {% for circle in circles %}
+        <li>{{ circle }}</li>
+    {% endfor %}
+</ul>
+{% endblock img %}
